@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+<body>
+    
+
+<script>
+/*
+let str = "hello this is CAPITAL LETTER";
+
+// it returns a converted value
+x = str.toLowerCase();
+console.log(x);
+*/
+/*
+// String conversion
+a = 50;
+b = 60;
+
+console.log(a+b);
+console.log(a+b.toString());
+*/
+
+
+/*
+// we can convert string to array
+let str = "hello this is strign";
+x = str.split(" ");
+*/
+
+/*
+let str = "      hello this is strign     ";
+console.log(str);
+
+console.log(str.trim())
+*/
+
+/*
+let str = "hello this is strign";
+x = str.charAt(11);
+console.log(x);
+*/
+
+
+/*
+// # retrun ascii code from given character
+let str = "aello this is strign";
+x = str.charCodeAt(0);
+console.log(x);
+*/
+
+
+/*
+// concat()
+let str1 = "Hello ";
+let str2 = "Hi";
+
+//console.log(str1 + str2 )
+x = str1.concat(str2);
+console.log(x);
+*/
+
+
+
+/*
+// search
+let str = "hello hi this is text";
+
+x = str.search("hi");
+console.log(x);
+*/
+
+
+/*
+let str = "hello hi this is text";
+//x = str.match("i")
+console.log(x);
+*/
+
+
+/*
+let str = "hello hi this is text";
+x = str.replace(" is "," Komal ")
+console.log(x);
+*/
+
+
+/*
+let str = "hello hi this is text";
+//x = str.substr(3,10)  // it will not count the space
+//x = str.substring(3,10) // it will count the space
+console.log(x)
+*/
+
+
+
+/*
+let str = "hello hi this is text";
+
+//x = str.slice(2,10);
+//x = str.slice(2);
+x = str.slice(-5,-2);
+console.log(x)
+*/
+
+let str = "hello hi this is text";
+let arr = ["hello", "hi", "this", "is", "text"];
+console.log(arr.length);
+let n = [];
+
+for(i=0; i<arr.length; i++){
+    n[i] = arr[5-(1+i)]
+}
+
+console.log(n);
+
+
+</script>
+</body>
+</html>
+
+
+show databases;
+
+use mysqlclass;
+
+create table if not exists student(id int, name varchar(20), city varchar(20));
+desc student;
+
+insert into student(id, name, city) values(101, "Sumit", "New Delhi");
+insert into student(name, id, city) values("Shristi", 102, "Mumbai");
+insert into student(name, id, city) values("Rohan", "103", "Pune");
+insert into student values(105, "Lalit", "Himachal");
+insert into student (id, city) values(105, "Himachal");
+insert into student values("Lalit", "Himachal");	 # x
+select * from student;
+
+
+
+
+
+
+
+
+create table emp(
+	id int auto_increment primary key,
+    name varchar(30) not null,
+    city varchar(30) default "Delhi",
+    phone varchar(10) unique
+);
+
+desc emp;
+
+-- insert into emp(name, city, phone) values("Mohan", "GOa", "9632587411");
+insert into emp(name, city, phone) values("Ankit", "Himachal", "9632587415");
+insert into emp(id, name, city, phone) values(3, "Mukesh", "Jammu", "9632587414");
+
+insert into emp(name, phone) values("rakesh", 9638527416);
+select * from emp;
+
+
+
+
+create table salary(
+	id int primary key auto_increment,
+    name varchar(30) not null,
+    salary int check(salary>50000)
+);
+
+desc salary;
+
+insert into salary(name, salary) values("MOhan", 70000);
+insert into salary(name, salary) values("Ramesh", 48000);
+select * from salary;
+
+
+
+
+create table stu(
+	rollno int primary key auto_increment,
+    name varchar(30),
+    city varchar(30),
+    hindi int,
+    english int,
+    skt int,
+    course varchar(60)
+);
+desc stu;
+
+insert into stu(name, city, hindi, english, skt, course) 
+values("Rahul", "Delhi", 50, 64, 34, "SOFTWARE"),
+("Rahul", "GUJRAT", 54, 45, 34, "SOFTWARE"),
+("Rahul", "GUJRAT", 45, 64, 97, "MULTIMEDIA"),
+("Rahul", "Delhi", 56, 75, 62, "SOFTWARE"),
+("Rahul", "Delhi", 34, 64, 34, "WD"),
+("Rahul", "PUNJAB", 75, 66, 56, "MULTIMEDIA"),
+("Rahul", "HARYANA", 99, 85, 64, "SOFTWARE");
+
+
+select * from stu;
+
+select * from stu where city = "delhi";
+select * from stu where city = "delhi" and course = "software";
+select * from stu where city = "delhi" or city = "gujrat";
+select * from stu where city in ("delhi", "gujrat");
+
+select * from stu where city not in ("delhi", "gujrat");
+select * from stu where hindi between 50 and 80;
+select * from stu where hindi >= 50 and hindi <= 80;

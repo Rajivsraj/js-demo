@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+
+<div class="img-box">
+    <img name="images" src="a.png" width="100%">
+    <button id="next" onclick="next()">Next</button>
+    <button id="prev" onclick="prev()">Previous</button>
+</div>
+
+<style>
+    .img-box{
+        position: relative;
+        width: 50%;
+    }
+
+    #next, #prev{
+        position: absolute;
+        top: 50%;
+    }
+
+    #next{
+        right: 0px;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background-color: orangered;
+        color: white;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    #prev{
+        left: 0px;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background-color: orangered;
+        color: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+</style>
+
+<br>
+
+
+<script>
+slider_images = ["a.png", "b.png", "c.png", "d.png", "e.png"];
+
+x = document.images.src = slider_images[0];
+i = 0;
+
+console.log(slider_images.length);
+function next(){
+    if(i>=slider_images.length-1){
+        i = 0;
+        document.images.src = slider_images[i];
+    }else{
+        i++;
+        document.images.src = slider_images[i];
+    }
+}
+function prev(){
+    if(i<=0){
+        i = slider_images.length-1;
+        document.images.src = slider_images[i];
+    }else{
+        i--;
+        document.images.src = slider_images[i];
+    }
+}
+</script>
+
+</body>
+</html>
