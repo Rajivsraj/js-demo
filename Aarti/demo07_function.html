@@ -1,0 +1,240 @@
+<script src="functions.js"></script>
+<script>
+// var a = 50;
+// var b = 60;
+// document.write(a+b)
+/*
+function sum(){
+    let a = 50;
+    let b = 60;
+    document.write(a+b);
+    console.log(a+b)
+}
+
+function hello(){
+    document.write("hi 1st line");
+    document.write("hi hello function");
+}
+
+document.write("hello line 20");
+hello();
+document.write("<br>-------<br>");
+sum();
+sum();
+hello();
+*/
+// add, plus, minus, multiply divide
+// assignement grade
+
+
+/*
+function minus(){
+    let a = 50;
+    let b = 30;
+    document.write(a-b);
+}
+
+minus();
+*/
+
+
+
+// Function with argument
+/*
+function sum(a, b){
+    document.write(a+b);
+}
+
+sum(10, 20);
+
+document.write("<br>");
+sum(100, 200);
+*/
+
+
+// function with default parameter
+/*
+function sum(a = 10, b = 10, c=10){
+    document.write(a+b+c);
+}
+sum(100);
+*/
+
+/*
+let abss = 4;
+let deptt = "Sales";
+
+function deductionOfAbs(abs, dept) {
+    let deduction = 0;
+    if (abs >= 7 && dept == "Sales") {
+        deduction = abs * 1000;
+    } else if (abs >= 5 && dept == "Sales") {
+        deduction = abs * 700;
+    } else if (abs >= 2 && dept == "Sales") {
+        deduction = abs * 100;
+    }
+
+    document.write("Deduction is: " + deduction);
+}
+
+deductionOfAbs(abss, deptt);
+
+
+function discount(amount){
+    document.write("Price: "+amount+"<br>");
+    document.write("disccount: "+(amount*12/100)+"<br>");
+    document.write("payment: "+(amount-(amount*12/100)))
+}
+
+discount(15000);
+*/
+
+/*
+function sum(){
+    document.write("this is inside the fucntin <br>");
+    document.write("this is inside the fucntin <br>");
+    document.write("this is inside the fucntin <br>");
+    document.write("this is inside the fucntin <br>");
+    document.write("this is inside the fucntin <br>");
+    document.write("this is inside the fucntin <br>");
+    return 100000;
+}
+
+let x = sum()+10000;
+document.write(x);
+
+document.write("<br>");
+
+let y = sum();
+document.write(y);
+*/
+
+
+/*
+function hra(){
+    let salary = 10000;
+    let hra = 0;
+
+    if(salary >= 20000){
+        hra = salary*10/100;
+    }else{
+        hra = salary*5/100;
+    }
+
+    return hra;
+}
+
+// let x = hra();
+// document.write(x);
+
+document.write(hra());
+*/
+
+/*
+function deduction(){
+    let salary = 10000;
+    let hra = 0;
+
+    if(salary >= 20000){
+        hra = salary*10/100;
+    }else{
+        hra = salary*5/100;
+    }
+
+    document.write(hra);
+    // return hra;
+}
+
+function salary(){
+    document.write(50000);
+    // return 50000;
+}*/
+// document.write("Aarti: Your hra  is"+hra());
+
+// document.write("sumit"+salary());
+// document.write("<br>");
+// document.write("amit "+(salary()-deduction()));
+// document.write("<br>");
+
+// document.write("Rajiv: Your House  Rental Allwance is"+(hra()+500));
+
+// function payment(){
+//     document.write(500000-5000);
+// }
+
+// document.write("Payable"+(salary()-deduction()));
+// payment();
+
+
+
+
+
+/////////// DEFAULT PARAMETERS ///////////////////
+/*
+function sum(a=0, b=1){
+    // return arguments[0]+arguments[1];
+    return a+b;
+}
+*/
+
+// x = sum(10);
+
+// document.write(x);
+
+
+// prblem / lengthy solution
+/*
+function sum(a, b, c, d){
+    if(d == undefined){
+        d = 0;
+    }
+
+    if(c == undefined){
+        c = 0
+    }
+    return a+b+c+d;
+}
+
+x = sum();
+
+document.write(x);
+*/
+
+// 2nd solution
+/*
+function sum(a=0, b=0, c=0, d=10, e=0, f=0){
+    return a+b+c+d+e+f;
+}
+
+x = sum(10, 20);
+
+document.write(x);
+*/
+
+/*
+function sum(...args){
+    return args[0]+args[1]+args[2];
+}
+
+x = sum(10, 20);
+document.write(x);
+*/
+
+
+// function sum(...args){
+//     total=0;
+//     for(let i =0; i<args.length; i++){
+//         total = total+args[i];
+//     }
+
+//     return total;
+// }
+
+// x = sum(10, 20, 30, 40, 50, 345,45,54,54,545,45,4,5,4,545,);
+// document.write(x);
+
+
+
+
+
+</script>

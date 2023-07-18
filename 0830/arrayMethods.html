@@ -1,0 +1,81 @@
+<script>
+
+// data = [45, 64, 64, 54, 83, 63];
+// n = data.length
+// x = data.pop();
+// data.push(100, 200, 300)
+
+// data.shift()
+// data.unshift(100, 200)
+
+// data.sort()
+// console.log(x);
+// console.log(data);
+
+
+// 2D array
+
+data = [
+    [10, 20, 30], 
+    [40, 50, 60], 
+    [70, 100, 80], 
+    [90, 120, 110]
+]
+
+console.log(data.length)
+
+// for(let i = 0; i<data.length; i++){
+//     console.log(data[i]);
+// }
+
+
+
+// for(let i = 0; i<data.length; i++){
+//     for(let j = 0; j<data[i].length; j++){
+//         console.log(data[i][j]);
+//         document.write(data[i][j]+" ");
+//     }
+//     document.write("<br>");
+// }
+
+
+data = [
+    [10, 20, 30], 
+    [40, 50, 60], 
+    [70, 100, 80], 
+    110
+]
+
+// data = [
+//     564645654654645645645645630, 
+//     60, 
+//     80, 
+//     110
+// ]
+
+
+for(let i=0; i < data.length; i++){
+    
+    if(data[i].length > 1){
+        for(let j = 0; j<data[i].length; j++){
+            document.write(data[i][j]+ " " )
+        }
+    }else{
+        document.write(data[i]);
+    }
+    document.write("<br>");
+    
+
+}
+
+// document.write(data[0][0]);
+// document.write(data[0][1]);
+// document.write(data[0][2]);
+// document.write(data[1][0]);
+// document.write(data[1][1]);
+// document.write(data[1][2]);
+// document.write(data[2][0]);
+// document.write(data[2][1]);
+// document.write(data[2][2]);
+// document.write(data[3]);
+</script>

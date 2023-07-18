@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [15, 20, 8, 7, 9, 3, 4, 5, 2];
+        let even = [];
+        let ieven = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                even[ieven] = array[i];
+                ieven++;
+                array.splice(i, 1);
+                i--;
+            }
+        }
+
+        document.write(array + "<br>" + even);
+    </script>
+</body>
+</html>
