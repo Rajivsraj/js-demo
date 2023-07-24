@@ -6,3 +6,4 @@ function sum(...args){
 
     return total;
 }
+

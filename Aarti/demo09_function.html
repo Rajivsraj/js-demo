@@ -1,0 +1,21 @@
+<script>
+// closer function
+function outer(){
+    x = 50;
+    document.write(x);
+
+    function inner(){
+        var y = 100;
+        document.write("<br>This is inner function"+x);
+    }
+
+    // document.write(y); not allowed
+
+    inner();
+}
+
+outer();
+
+
+
+</script>
