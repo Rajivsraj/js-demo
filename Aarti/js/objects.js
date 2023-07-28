@@ -61,7 +61,7 @@ console.log(student);
 // console.log(stu);
 
 
-
+/*
 let stu = {
     name: "Rahul",
     age: 20,
@@ -81,3 +81,32 @@ delete stu.age;
 console.log(stu);
 console.log(stu.age);
 // console.log(stu.course);
+*/
+
+
+// factory Function
+/*
+function sutdent(){
+    return {
+        name: "Aarti",
+        coruse: "wd",
+        age: 19,
+        city: "New Delhi"
+    };
+}
+console.log(sutdent());
+*/
+
+function sutdent(name, course, age, city){
+    return {
+        name: name,
+        coruse: course,
+        age: age,
+        city: city
+    };
+}
+let stu1 = sutdent("Rahul", "WD", 20, "Goa");
+console.log(stu1);
+
+let stu2 = sutdent("Mohan", "IT", 34, "dELHI");
+console.log(stu2);
