@@ -30,7 +30,11 @@ student["names"] = "Rahul";
 student["age"] = 30;
 student["city"] = "delhi";
 student.course = "Wd";
+    // or
 
+student["name"]= "Rahul";
+student["city"] = "Mumbai";
+student["age"] = 34;
 console.log(student);
 */
 
@@ -97,6 +101,8 @@ function sutdent(){
 console.log(sutdent());
 */
 
+
+/*
 function sutdent(name, course, age, city){
     return {
         name: name,
@@ -110,3 +116,97 @@ console.log(stu1);
 
 let stu2 = sutdent("Mohan", "IT", 34, "dELHI");
 console.log(stu2);
+*/
+
+/*
+obj1 = {}
+obj1.name = "Rahul";
+obj1.age  = 30;
+
+
+obj = new Object()
+obj.name = "Rahul";
+obj.age  = 30;
+obj.total = function(){
+    return 1000;
+}
+*/
+
+
+// constructor1
+// function Student(){
+//     this.name = "Rahul";
+//     this.age = 30;
+//     this.city = "Delhi";
+//     this.total = function(){
+//         return 1000;
+//     }
+// }
+
+// obj = new Student();
+// console.log(obj);
+
+// constructor1
+// function Student(nm, age, city){
+//     this.name = nm;
+//     this.age = age;
+//     this.city = city;
+//     this.total = function(){
+//         return 1000;
+//     }
+// }
+
+// obj = new Student("Rahul", 34, "Delhi");
+// obj2 = new Student("mohan", 32, "Mumai");
+// console.log(obj);
+// console.log(obj2);
+
+
+// check property in object
+function car(){
+    this.name = "BMW";
+    this.brand = "BMW";
+    this.color = "black";
+    this.maxSpeed = 300;
+    this.height = "5 feet";
+}
+
+/*
+obj = new car();
+console.log(obj);
+let k;
+
+for(k in obj){
+    console.log(obj[k]);
+}
+
+for(k in obj){
+    if(obj[k] == undefined){
+        document.write("not exists");
+    }else{
+        console.log(obj[k]);
+    }
+}*/
+
+/*
+obj = new car();
+console.log(obj);
+
+// x = obj.hasOwnProperty("age");
+// console.log(x);
+
+if(obj.hasOwnProperty("brand")){
+    console.log(obj.brand);
+}else{
+    console.log("Not exists");
+}*/
+
+
+obj = new car();
+
+if("color" in obj){
+    document.write("exists");
+}else{
+    document.write("not exists");
+}
+
