@@ -163,13 +163,13 @@ obj.total = function(){
 
 
 // check property in object
-function car(){
-    this.name = "BMW";
-    this.brand = "BMW";
-    this.color = "black";
-    this.maxSpeed = 300;
-    this.height = "5 feet";
-}
+// function car(){
+//     this.name = "BMW";
+//     this.brand = "BMW";
+//     this.color = "black";
+//     this.maxSpeed = 300;
+//     this.height = "5 feet";
+// }
 
 /*
 obj = new car();
@@ -202,11 +202,53 @@ if(obj.hasOwnProperty("brand")){
 }*/
 
 
-obj = new car();
+// obj = new car();
 
-if("color" in obj){
-    document.write("exists");
-}else{
-    document.write("not exists");
+// if("color" in obj){
+//     document.write("exists");
+// }else{
+//     document.write("not exists");
+// }
+
+
+
+// private property and access them
+/*
+function Car(){
+    var c = "hello";
+    this.name = "audi";
+    this.speed = 200;
+    var price = "50L";  // private property
+    this.pricefun = function(v){
+        return this.speed+v;
+        
+    }
 }
+
+let car1 = new Car();
+console.log(car1);
+
+console.log(car1.pricefun(10));
+*/
+
+
+function Car(){
+    this.name = "bmw";
+    this.price = "50l";
+    this.speed = 300;
+}
+
+
+Car.prototype.color = "blue";
+let rahul = new Car();
+// rahul.color = "green";
+console.log(rahul);
+
+let sumit = new Car();
+console.log(sumit);
+
+let amit = new Car()
+console.log(amit)
+
+console.log(sumit.color);
 
