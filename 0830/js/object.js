@@ -80,19 +80,69 @@ stu2.fullname = function(){ return "Rahul Kumar"; };
 console.log(stu2);
 */
 
-function sum(){
-    return 3094540;
+// function sum(){
+//     return 3094540;
+// }
+
+
+// let student = {
+//     name: "rahul",
+//     lname: "Kumar",
+//     fees: function(){ 
+//         return 3000; 
+//     },
+//     total: sum
+// }
+
+// console.log(student);
+// console.log(student.total());
+
+
+
+// function mobile(){
+//     let wages = 1500;
+//     this.ram = "4GB";
+//     this.storage = "16GB";
+//     this.color = "green";
+//     this.price = function(){
+//         return t+m+w;
+//     }
+// }
+
+// let x = new mobile();
+// console.log(x);
+// console.log(x.mobile_name());   // access priavate property using public property
+
+
+
+function mobile(){
+    this.brand = "samsung";
+    this.ram = "4GB";
+    this.storage = "16GB";
+    this.color = "green";
+    this.price = function(){
+        return this.brand;
+    }
 }
 
 
-let student = {
-    name: "rahul",
-    lname: "Kumar",
-    fees: function(){ 
-        return 3000; 
-    },
-    total: sum
-}
+// prototype
+let rahul = new mobile();
+mobile.prototype.camera = "108px";
+console.log(rahul);
 
-console.log(student);
-console.log(student.total());
+let sumit = new mobile();
+sumit.sensor = true;
+console.log(sumit);
+
+let ajay = new mobile();
+console.log(ajay);
+console.log(ajay.camera);
+
+// console.log(Object.keys(rahul));
+// for(let y in ajay){
+//     console.log(ajay[y]);
+//     if(typeof(ajay[y]) == "function"){
+//         console.log(ajay[y]());
+//     }
+// }
