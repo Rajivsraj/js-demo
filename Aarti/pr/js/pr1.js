@@ -61,6 +61,33 @@
 
 
 
+// function car(){
+//     this.name = "BMW";
+//     this.brand = "BMW";
+//     var color = "black";    // private  property
+//     this.maxSpeed = 300;
+//     this.height = "5 feet";
+//     this.colorShow = function(){
+//         return this.color;
+//     }
+// }
+
+// bmw = new car()
+// console.log(bmw.color);
+
+// car.prototype.weight = "1 Ton";
+
+// Object.keys(bmw);
+
+
+// prototype
+// var a = {}
+
+// console.log(Object.prototype);
+// console.log(Object.getPrototypeOf(a));
+// console.log(Object.getPrototypeOf(Object.prototype));
+
+
 function car(){
     this.name = "BMW";
     this.brand = "BMW";
@@ -72,9 +99,9 @@ function car(){
     }
 }
 
-bmw = new car()
-console.log(bmw.color);
-
-car.prototype.weight = "1 Ton";
-
-Object.keys(bmw);
+let bmw = new car();
+console.log(car.prototype);
+// both same
+console.log(car.prototype);
+console.log(car.prototype.constructor);
+console.log(bmw.__proto__);

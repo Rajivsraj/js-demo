@@ -115,6 +115,46 @@ console.log(stu2);
 
 
 
+// function mobile(){
+//     this.brand = "samsung";
+//     this.ram = "4GB";
+//     this.storage = "16GB";
+//     this.color = "green";
+//     this.price = function(){
+//         return this.brand;
+//     }
+// }
+
+
+// // prototype
+// let rahul = new mobile();
+// mobile.prototype.camera = "108px";
+// console.log(rahul);
+
+// let sumit = new mobile();
+// sumit.sensor = true;
+// console.log(sumit);
+
+// let ajay = new mobile();
+// console.log(ajay);
+// console.log(ajay.camera);
+
+// console.log(Object.keys(rahul));
+// for(let y in ajay){
+//     console.log(ajay[y]);
+//     if(typeof(ajay[y]) == "function"){
+//         console.log(ajay[y]());
+//     }
+// }
+
+// function adca(){
+
+// this.course="Advance diploma in compute application";
+// this.time="2 years";
+// }
+// let x= new adca();
+// document.write(x);
+
 function mobile(){
     this.brand = "samsung";
     this.ram = "4GB";
@@ -125,24 +165,36 @@ function mobile(){
     }
 }
 
+let sam = new mobile()
+// mobile.prototype.camera = "32px";
 
-// prototype
-let rahul = new mobile();
-mobile.prototype.camera = "108px";
-console.log(rahul);
+// console.log(sam);
+// console.log(sam.brand);
+// console.log(sam.__proto__);
+// console.log(mobile.prototype);
 
-let sumit = new mobile();
-sumit.sensor = true;
-console.log(sumit);
+// console.log(sam.brand);
 
-let ajay = new mobile();
-console.log(ajay);
-console.log(ajay.camera);
 
-// console.log(Object.keys(rahul));
-// for(let y in ajay){
-//     console.log(ajay[y]);
-//     if(typeof(ajay[y]) == "function"){
-//         console.log(ajay[y]());
-//     }
-// }
+// let x = {
+//     name: "Rahul",
+//     age: 20
+// };
+
+// let x = 50;
+// console.log(x);
+// console.log(Object.getPrototypeOf(x));
+// console.log(Object.getPrototypeOf(Object.prototype));
+
+// let arr = ["hello", "hi", "by"]
+let arr = "Hello";
+// let arr = 545;
+// let arr = 545.45;
+console.log(arr);
+// console.log(Object.prototype);
+console.log(Object.getPrototypeOf(arr));
+console.log(Object.getPrototypeOf(arr).__proto__);
+
+
+// console.log(x.__proto__);
+// console.log(sam.getProtoTypeOf());
