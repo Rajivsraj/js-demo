@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+<!-- <p id="one">5</p>
+<p id="two">15</p> -->
+
+<input type="text" id="number" value="5">
+<p id="sh"></p>
+<button onclick="show()">Get Value</button>
+
+<script>
+// let x = document.getElementById("one").innerHTML;
+// let y = document.getElementById("two").innerHTML;
+// console.log(typeof(x));
+// document.write(parseInt(x)+parseInt(y));
+
+show = function(){
+    let v = document.getElementById("number").value;
+    document.getElementById("sh").innerHTML = v;
+}
+</script>
+</body>
+</html>
