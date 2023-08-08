@@ -88,20 +88,63 @@
 // console.log(Object.getPrototypeOf(Object.prototype));
 
 
-function car(){
+// function car(){
+//     this.name = "BMW";
+//     this.brand = "BMW";
+//     var color = "black";    // private  property
+//     this.maxSpeed = 300;
+//     this.height = "5 feet";
+//     this.colorShow = function(){
+//         return this.color;
+//     }
+// }
+
+// let bmw = new car();
+// console.log(car.prototype);
+// // both same
+// console.log(car.prototype);
+// console.log(car.prototype.constructor);
+// console.log(bmw.__proto__);
+
+
+
+// function car(){
+//     this.name = "BMW";
+//     this.brand = "BMW";
+//     var color = "black";    // private  property
+//     this.maxSpeed = 300;
+//     this.height = "5 feet";
+//     this.colorShow = function(){
+//         return this.color;
+//     }
+// }
+// let samsung = new car();
+// console.log(car);
+// console.log(samsung.__proto__);
+
+
+function Car(){
     this.name = "BMW";
     this.brand = "BMW";
-    var color = "black";    // private  property
-    this.maxSpeed = 300;
-    this.height = "5 feet";
-    this.colorShow = function(){
-        return this.color;
-    }
 }
 
-let bmw = new car();
-console.log(car.prototype);
-// both same
-console.log(car.prototype);
-console.log(car.prototype.constructor);
-console.log(bmw.__proto__);
+Car.prototype.speed = 200;
+let x = new Car();
+
+
+function Car2(){
+    Car.call(this);
+    this.name2 = "BMW";
+    this.brand2 = "BMW";
+}
+
+// inheriting SuperObject
+Car2.prototype = Object.create(Car.prototype);  
+
+// re-assigning constructor
+Car2.prototype.construtor = Car2
+
+let y = new Audio();
+console.log(y.name);
+console.log(y.name2);
+
