@@ -122,7 +122,7 @@
 // console.log(car);
 // console.log(samsung.__proto__);
 
-
+/*
 function Car(){
     this.name = "BMW";
     this.brand = "BMW";
@@ -147,4 +147,7 @@ Car2.prototype.construtor = Car2
 let y = new Audio();
 console.log(y.name);
 console.log(y.name2);
+
+*/
+
 
