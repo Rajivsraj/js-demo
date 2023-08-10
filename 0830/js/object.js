@@ -201,28 +201,62 @@ console.log(stu2);
 
 
 // Prototype Inheritance
-function Mobile(){
-    this.brand = "samsung";
-    this.ram = "4GB";
-    this.storage = "16GB";
-    this.color = "green";
-    this.price = function(){
-        return this.brand;
-    }
-}
+// function Mobile(){
+//     this.brand = "samsung";
+//     this.ram = "4GB";
+//     this.storage = "16GB";
+//     this.color = "green";
+//     this.price = function(){
+//         return this.brand;
+//     }
+// }
 
-function Student(){
-    Mobile.call(this);  // this is inheriting the Mobile Object
-    this.name = "Rahul";
-    this.city = "New Delhi";
-    this.class = "12th";
-}
+// function Student(){
+//     Mobile.call(this);  // this is inheriting the Mobile Object
+//     this.name = "Rahul";
+//     this.city = "New Delhi";
+//     this.class = "12th";
+// }
 
-Mobile.prototype.camera = "108px";
+// Mobile.prototype.camera = "108px";
 
-// Student.prototype = Object.create(Mobile.prototype)
-// Student.prototype.constructor = Mobile;
-let stu = new Student();
-console.log(stu);
+// // Student.prototype = Object.create(Mobile.prototype)
+// // Student.prototype.constructor = Mobile;
+// let stu = new Student();
+// console.log(stu);
 // console.log(stu.ram);   // accessing mobile property using sutudent object
 // console.log(stu.camera);
+
+
+function Mobile(){
+    this.extra = "Mobile main";
+    // this.ram = "6gb";
+}
+
+Mobile.prototype.ram = "16GB";
+
+function Mobile1(){
+    Mobile.call(this)
+    this.price = "20000";
+}
+
+let a = new Mobile1
+// console.log(a.price);
+
+function Mobile2(){
+    Mobile.call(this)
+    this.storage = "250GB";
+}
+
+Mobile1.prototype = Object.create(Mobile.prototype)
+Mobile1.prototype.constructor = Mobile1;
+
+
+Mobile2.prototype = Object.create(Mobile.prototype)
+Mobile2.prototype.constructor = Mobile2
+
+let m1 = new Mobile1
+let m2 = new Mobile2
+// console.log(con)
+console.log(m1.ram);
+console.log(m2.ram);
