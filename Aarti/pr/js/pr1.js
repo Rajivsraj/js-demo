@@ -151,3 +151,10 @@ console.log(y.name2);
 */
 
 
+let Mobile = function(){
+
+}
+
+Mobile.prototype.getModel = function(){
+    return this.model
+}

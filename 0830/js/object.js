@@ -228,6 +228,8 @@ console.log(stu2);
 // console.log(stu.camera);
 
 
+
+/*
 function Mobile(){
     this.extra = "Mobile main";
     // this.ram = "6gb";
@@ -241,7 +243,8 @@ function Mobile1(){
 }
 
 let a = new Mobile1
-// console.log(a.price);
+console.log(a.price);
+console.log(a.extra);
 
 function Mobile2(){
     Mobile.call(this)
@@ -251,7 +254,6 @@ function Mobile2(){
 Mobile1.prototype = Object.create(Mobile.prototype)
 Mobile1.prototype.constructor = Mobile1;
 
-
 Mobile2.prototype = Object.create(Mobile.prototype)
 Mobile2.prototype.constructor = Mobile2
 
@@ -260,3 +262,56 @@ let m2 = new Mobile2
 // console.log(con)
 console.log(m1.ram);
 console.log(m2.ram);
+*/
+
+
+// let add = {
+//     plus: function(){
+//         return "This is will add";
+//     }
+// }
+
+// let multiply = {
+//     mul: function(){
+//         return "This is will multiply";
+//     }
+// }
+
+// let calc = Object.assign({}, add, multiply);
+// let calc2 = Object.assign({}, multiply);
+
+// console.log(calc.plus());
+// console.log(calc.mul());
+
+// console.log(calc2.mul());
+
+
+
+
+
+let add = {
+    plus: function(){
+        return "This is will add";
+    }
+}
+
+let multiply = {
+    mul: function(){
+        return "This is will multiply";
+    }
+}
+
+let One = function(){
+
+}
+
+let Two = function(){
+
+}
+
+// Compositing feature
+Object.assign(One.prototype, add, multiply);
+Object.assign(Two.prototype, multiply);
+
+let o = new One();
+let t = new Two();
