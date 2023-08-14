@@ -103,3 +103,27 @@ class Student{
 
 // accessing static method
 Student.showName();
+
+
+
+// let add = {
+//     plus: function(){
+//         return "This is will add";
+//     }
+// }
+
+// let multiply = {
+//     mul: function(){
+//         return "This is will multiply";
+//     }
+// }
+
+// let calc = Object.assign({}, add, multiply);
+// let calc2 = Object.assign({}, multiply);
+
+// console.log(calc.plus());
+// console.log(calc.mul());
+
+// console.log(calc2.mul());
+
+

@@ -265,53 +265,88 @@ console.log(m2.ram);
 */
 
 
-// let add = {
-//     plus: function(){
-//         return "This is will add";
-//     }
-// }
 
-// let multiply = {
-//     mul: function(){
-//         return "This is will multiply";
-//     }
-// }
-
-// let calc = Object.assign({}, add, multiply);
-// let calc2 = Object.assign({}, multiply);
-
-// console.log(calc.plus());
-// console.log(calc.mul());
-
-// console.log(calc2.mul());
-
-
-
-
-
-let add = {
-    plus: function(){
-        return "This is will add";
-    }
+/*
+# Mixins
+let Mobile = {
+    name: "Samsung",
+    price: 33000
 }
 
-let multiply = {
-    mul: function(){
-        return "This is will multiply";
-    }
+let Student = {
+    class: "12th"
 }
 
-let One = function(){
+let Parents = {
+    fname: "Mr. Ram",
+    address: "My address"
 
 }
 
-let Two = function(){
+let Car = {
+    name: "audio",
+    wheel: 4
+}
+
+function P(){
 
 }
 
-// Compositing feature
-Object.assign(One.prototype, add, multiply);
-Object.assign(Two.prototype, multiply);
+let stuDetails = Object.assign({}, Student, Parents, Mobile)
+console.log(stuDetails.class);
+console.log(stuDetails.fname);
 
-let o = new One();
-let t = new Two();
+let stud = Object.assign({}, Student)
+console.log(stud.class)
+
+
+let stud2 = Object.assign({}, Student, Parents);
+console.log(stud.class)
+
+Object.assign(P.prototype, Student, Parents, Mobile)
+
+let pa = new P();
+console.log(pa.fname);
+*/
+
+
+
+
+function Mobile(){
+    this.extra = "Mobile main";
+    // this.ram = "6gb";
+}
+
+Mobile.prototype.ram = "16GB";
+
+function Mobile1(){
+    Mobile.call(this)
+    this.price = "20000";
+}
+
+function Mobile2(){
+    Mobile.call(this)
+    this.storage = "250GB";
+}
+
+function Mobile3(){
+    Mobile.call(this)
+    this.storage = "250GB";
+}
+
+// Mobile1.prototype = Object.create(Mobile.prototype)
+// Mobile1.prototype.constructor = Mobile1;
+
+// Mobile2.prototype = Object.create(Mobile.prototype)
+// Mobile2.prototype.constructor = Mobile2
+
+// Mobile3.prototype = Object.create(Mobile.prototype)
+// Mobile3.prototype.constructor = Mobile3
+
+function inherit(child, parent){
+    child.prototype = Object.create(parent.prototype)
+    child.prototype.constructor = child;
+}
+
+m3 = inherit(Mobile3, Mobile)
+m2 = inherit(Mobile2, Mobile)
