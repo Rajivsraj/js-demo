@@ -158,3 +158,5 @@ let Mobile = function(){
 Mobile.prototype.getModel = function(){
     return this.model
 }
+
+let s = function(model, price)
