@@ -287,7 +287,7 @@ console.log(stu.city);
 */
 
 
-
+/*
 function Parents(){
     this.pname = "Mr. Ram Avataar";
     this.phone = "9632587410";
@@ -307,6 +307,110 @@ function Student(){
 
 console.log(Parents);
 console.log(Student);
+*/
 
 
+/*
+function Parents(){
+    this.pname = "Mr. Ram Avataar";
+    this.phone = "9632587410";
+    this.property = "1000000acr";
+}
+
+Parents.prototype.city = "New Delhi";
+
+function Student(){
+    Parents.call(this); 
+    this.name = "Rahul Verma";
+    this.class = "12th";
+    this.address = "Sarita Vihar";
+    this.earning = 500000;
+}
+
+// it will assign parents ptototype in student prototype
+Student.prototype = Object.assign(Parents.prototype);
+
+// it will create a new prototype in Student prototype
+// Student.prototype = Object.create(Parents.prototype);
+console.log(Parents);
+console.log(Student);
+console.log(Student.prototype.city) // if want to access prototype than use function name
+
+let stu = new Student();
+console.log(stu.phone);
+*/
+
+
+
+
+/*
+function Parents(){
+    this.pname = "Mr. Ram Avataar";
+    this.phone = "9632587410";
+    this.property = "1000000acr";
+}
+
+Parents.prototype.city = "New Delhi";
+
+function Student(){
+    Parents.call(this); 
+    this.name = "Rahul Verma";
+    this.class = "12th";
+    this.address = "Sarita Vihar";
+    this.earning = 500000;
+}
+
+console.log(Parents);
+console.log(Student);
+
+Student.prototype = Object.assign(Parents.prototype);
+Student.prototype.constructor = Student;
+
+let x = new Student();
+// console.log(Student.prototype.city);
+console.log(x.city);
+*/
+
+
+
+function Parents(){
+    this.pname = "Mr. Ram Avataar";
+    this.phone = "9632587410";
+    this.property = "1000000acr";
+}
+
+Parents.prototype.city = "New Delhi";
+
+
+function Staff(){
+    Parents.call(this);
+    this.sname = "Mr. Ram Avataar";
+    this.sphone = "9632587410";
+    this.sproperty = "1000000acr";
+}
+
+Staff.prototype.salary = 343359045;
+
+
+
+function Student(){
+    Staff.call(this); 
+    this.name = "Rahul Verma";
+    this.class = "12th";
+    this.address = "Sarita Vihar";
+    this.earning = 500000;
+}
+
+console.log(Parents);
+console.log(Staff);
+console.log(Student);
+
+Student.prototype = Object.assign(Parents.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype = Object.assign(Staff.prototype);
+Student.prototype.constructor = Student;
+
+let stu = new Student();
+console.log(stu.salary);
 
