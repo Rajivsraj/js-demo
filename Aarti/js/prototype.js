@@ -372,8 +372,9 @@ console.log(x.city);
 */
 
 
-
+/*
 function Parents(){
+    Staff.call(this);
     this.pname = "Mr. Ram Avataar";
     this.phone = "9632587410";
     this.property = "1000000acr";
@@ -383,14 +384,12 @@ Parents.prototype.city = "New Delhi";
 
 
 function Staff(){
-    Parents.call(this);
     this.sname = "Mr. Ram Avataar";
     this.sphone = "9632587410";
     this.sproperty = "1000000acr";
 }
 
 Staff.prototype.salary = 343359045;
-
 
 
 function Student(){
@@ -401,16 +400,65 @@ function Student(){
     this.earning = 500000;
 }
 
+function Admin(){
+    this.adm = "admin"
+}
 console.log(Parents);
 console.log(Staff);
 console.log(Student);
 
-Student.prototype = Object.assign(Parents.prototype);
-Student.prototype.constructor = Student;
-
 Student.prototype = Object.assign(Staff.prototype);
 Student.prototype.constructor = Student;
 
-let stu = new Student();
-console.log(stu.salary);
+Parents.prototype = Object.assign(Staff.prototype);
+Parents.prototype.constructor = Parents;
 
+Admin.prototype = Object.assign(Staff.prototype);
+Admin.prototype.constructor = Admin;
+
+let stu = new Student();
+console.log(stu.sphone);
+
+let p = new Parents()
+console.log(p.sphone);
+*/
+
+
+function Inheritance(child, parent){
+    child.prototype = Object.assign(parent.prototype);
+    child.prototype.constructor = child;
+}
+
+
+function Parents(){
+    this.pname = "Mr. Ram Avataar";
+    this.phone = "9632587410";
+    this.property = "1000000acr";
+}
+
+Parents.prototype.city = "New Delhi";
+
+function Student(){
+    Parents.call(this); 
+    this.name = "Rahul Verma";
+    this.class = "12th";
+    this.address = "Sarita Vihar";
+    this.earning = 500000;
+}
+
+function Admin(){
+    Parents.call(this);
+    this.abc = "new";
+}
+
+// Student.prototype = Object.assign(Parents.prototype);
+// Student.prototype.constructor = Student;
+
+Inheritance(Student, Parents);
+Inheritance(Admin, Parents);
+
+let stu = new Student()
+console.log(stu.pname);
+
+let adm = new Admin();
+console.log(adm.phone);

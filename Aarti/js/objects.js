@@ -232,12 +232,13 @@ console.log(car1.pricefun(10));
 */
 
 
+
+/*
 function Car(){
     this.name = "bmw";
     this.price = "50l";
     this.speed = 300;
 }
-
 
 Car.prototype.color = "blue";
 let rahul = new Car();
@@ -251,4 +252,33 @@ let amit = new Car()
 console.log(amit)
 
 console.log(sumit.color);
+*/
 
+
+class Parent{
+    constructor(name) {
+        this.name = name;
+    }
+
+    showName(){
+        console.log("My Name is "+this.name);
+    }
+
+}
+
+class Student extends Parent{
+    constructor(name, index) {
+        super(name);
+        this.index = index;
+    }    
+}
+
+const stu = new Student('Rahul', 1);
+
+console.log(stu.name);
+console.log(stu.index);
+stu.showName();
+// Expected output: "foo"
+
+// console.log(firstFooBar.getFullName());
+  // Expected output: "foo-1"
