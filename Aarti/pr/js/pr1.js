@@ -151,12 +151,39 @@ console.log(y.name2);
 */
 
 
-let Mobile = function(){
+// let Mobile = function(){
 
-}
+// }
 
-Mobile.prototype.getModel = function(){
-    return this.model
-}
+// Mobile.prototype.getModel = function(){
+//     return this.model
+// }
 
-let s = function(model, price)
+// let s = function(model, price)
+
+
+// let ar = ["Rahul", "Sumit", "Amit", "Ajay"];
+
+// ar.forEach(function(val, index, a){
+//     console.log(val);
+// });
+
+// for(let val of ar){
+//     console.log(val);
+// }
+
+
+// document.write(`hello 
+// my name is rahul`);
+
+// console.log(`hello my name is 
+// rahul`)
+
+// let name = "Rahul"
+// let age = 20;
+
+// console.log(`My name is ${name} and my age is ${age}`);
+
+let no = 20;
+
+console.log(no.toString())

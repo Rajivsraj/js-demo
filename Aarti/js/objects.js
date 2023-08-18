@@ -282,3 +282,4 @@ stu.showName();
 
 // console.log(firstFooBar.getFullName());
   // Expected output: "foo-1"
+
