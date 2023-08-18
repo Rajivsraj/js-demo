@@ -152,7 +152,7 @@ console.log(stu1.name);
 */
 
 
-
+/*
 class Parents{
     constructor(nm, ag){
         console.log("My name is "+nm);
@@ -173,3 +173,60 @@ class Student extends Parents{
 let stu1 = new Student("Rahul", 30);
 console.log(stu1.name.name);
 console.log(stu1.name.age);
+*/
+
+/*
+class Student{
+    constructor(){
+        this.nm = "Rahul";
+        this.age = 20;
+    }
+
+    static showDetail(nm, age){
+        this.nm = nm
+        this.age = age
+        console.log("my name is "+this.nm+" and my age is: "+this.age);
+    }
+}
+
+
+// let stu = new Student("Rahul", 20);
+// console.log(stu.name);
+
+Student.showDetail("Rahul", 20);
+console.log(Student.nm);
+
+let stu = new Student();
+stu.showDetail("Mohan", 40);
+*/
+
+
+/*
+// constructor inheritance
+class Student{
+    constructor(nm, ag){
+        this.nm = nm;
+        this.age = ag;
+    }
+
+    showDetail(){
+        console.log("my name is "+this.nm+" and my age is: "+this.age);
+    }
+}
+
+class Parent extends Student{
+    constructor(pnm, page){
+        super(pnm, page);
+        this.page = page;
+        this.pname = "Mr. Rajiv Verma";
+    }
+}
+
+
+let p = new Parent("Mohan", 39);
+console.log(p.pname);
+console.log(p.nm);
+console.log(p.age);
+console.log(p.page);
+p.showDetail();
+*/
