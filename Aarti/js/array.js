@@ -150,8 +150,39 @@ console.log(x);
 */
 
 
+/*
 let names = [ "aarti", "neha", "neha", "kajal", "soniya", "nisha" ];
 
 console.log(Array.isArray(names));
 console.log(Array.isArray("hello"));
 console.log(Array.isArray(555));
+*/
+
+
+// IMPORTANT FUNCITONS
+function even(no){
+    if(no%2==0){
+        return no;
+    }else{
+        return false;
+    }
+}
+
+
+/*
+let data = [43, 45, 234, 56, 45];
+
+x = data.map(even);
+console.log(x);
+
+for(let i of x){
+    if(i==false){
+        
+    }else{
+        console.log(i);
+    }
+
+}
+*/
+
+
