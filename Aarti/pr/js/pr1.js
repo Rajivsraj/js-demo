@@ -184,6 +184,11 @@ console.log(y.name2);
 
 // console.log(`My name is ${name} and my age is ${age}`);
 
-let no = 20;
+// let no = 20;
 
-console.log(no.toString())
+// console.log(no.toString())
+
+
+
+
+// DATE
