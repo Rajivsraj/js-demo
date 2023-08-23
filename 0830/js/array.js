@@ -122,6 +122,7 @@ for(let row of data){
     }
 }*/
 
+/*
 let array=[
     [
         ["Rahul" , "amit", "sumit"]
@@ -142,3 +143,46 @@ x[1][2][2];
 
 console.log(array[0][2])
 console.log(array[0][0][2])
+*/
+
+
+
+// ARRAY METHODS
+let data = [34, 5, 64, 354, 67, 45, 6,5,56];
+
+/*
+console.log(data);
+for(i=0; i<data.length; i++){
+    console.log(data[i]);
+}*/
+
+// data.pop();
+// data.push(222);
+
+// data.shift();
+// data.unshift(100);
+
+// i = data.indexOf(5);  // will find index no of value
+// console.log(typeof data);
+
+// will separate with specified value
+/*
+newstr = data.join("/")
+console.log(typeof newstr);
+console.log(newstr);
+*/
+
+// combine concate();
+/*
+let data2 = ["Rahul", "sumit", "amit"];
+let data3 = ["Delhi", "Mumbai"];
+narr = data.concat(data2, data3);
+console.log(narr);
+*/
+
+
+data = ["Rahul", "sumti", "amit", "ajay"]
+console.log(data);
+x = data.fill("Apple", 1, 3);
+console.log(x);
+console.log(data);
