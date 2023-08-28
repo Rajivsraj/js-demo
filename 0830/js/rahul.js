@@ -127,3 +127,9 @@ Student.showName();
 // console.log(calc2.mul());
 
 
+let heading = [];
+
+for(let i = 0; i<5; i++){
+    heading[i] = prompt("Enter Your heading "+i+1);
+}
+
