@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+    <p>hello</p>
+    <p>hello2</p>
+    <p>hello3</p>
+    <p>hello4</p>
+    <p>hello5</p>
+
+    <ul>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+    </ul>
+    
+    <div id="d1">
+        <p>hello22</p>
+        <p>hello22</p>
+        <p>hello32</p>
+        <p>hello42</p>
+        <p>hello52</p>
+    </div>
+
+
+    
+    <script>
+    //    console.log(document)
+    x = document.getElementById("d1");
+
+    x = x.getElementsByTagName("p");
+    len = x.length;
+    // console.log(x.length);
+    for(let i=0; i<len; i++){
+        console.log(x[i]);
+    }
+    // console.log(x);
+    </script>
+</body>
+</html>
