@@ -7,15 +7,27 @@
 </head>
 <body id="b_id">
    
-    <div id="one">Hello div 1</div>
+    <!-- <div id="one">Hello div 1</div>
 
     <div id="val1">20</div>
     <div id="val2">50</div>
 
 
     <a href="abc" id="link" class="onec">Hello</a>
-    <a href="abc2" id="link" class="onec2">Hello2</a>
+    <a href="abc2" id="link" class="onec2">Hello2</a> -->
+
+    <div id="box1">
+        hello box1
+    </div>
+
+    <div id="box2">
+        blank
+    </div>
     <script>
+
+        b1 = document.getElementById("box1").innerText;
+
+        document.getElementById("box2").innerText = b1;
         // console.log(document);
     //    x = document.getElementById("one").innerHTML;
     //    x = document.getElementById("one").innerText;
@@ -44,8 +56,8 @@
     // console.log(x);
     
 
-    x = document.getElementById("link");
-    console.log(x);
+    // x = document.getElementById("link");
+    // console.log(x);
     </script>
 </body>
 </html>
