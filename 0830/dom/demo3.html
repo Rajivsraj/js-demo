@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+    
+    <div id="d1">Home</div>
+
+    <div id="d2">
+        <p>1this si inside 2nd div</p>
+        hello
+        <p>2this si inside 2nd div</p>
+        
+    </div>
+
+    <div id="d3">
+        hello
+        <p>d2 2this si inside 2nd div</p>
+        
+    </div>
+
+    <script>
+        // console.log(Node);
+        // console.log(document);
+        // console.log(Element)
+
+        // console.log(Node.COMMENT_NODE)
+
+        // console.log(Node.nodeName)
+        // console.log(Node.nodeType)
+        // console.log(Node.nodeValue)
+
+        // console.log(Document);
+        // console.log(document);
+        // console.log(document.nodeName)
+        // console.log(document.nodeType)
+        // console.log(document.nodeValue)
+
+        // console.log(Element);
+        // let x = document.getElementById("d2");
+        // console.log(x.nodeName)
+        // console.log(x.nodeType)
+        // console.log(x.nodeValue)
+
+        // let x = document.getElementById("d2");
+
+        //   console.log(x);
+        //   console.log(x.nodeName);
+        //   console.log(x.nodeType);
+        //   console.log(x.nodeValue);
+
+        // let x = document.getElementById("d2");
+        // console.log(x);
+        // console.log(x.firstChild);
+        // console.log(x.firstChild.nodeName);
+        // console.log(x.firstChild.nodeType);
+        // console.log(x.firstChild.nodeValue);
+        // document.write(x.firstChild);
+
+
+        // let x = document.getElementById("d3");
+        // console.log(x);
+        // console.log(x.firstChild);
+        // console.log(x.firstChild.nodeName);
+        // console.log(x.firstChild.nodeType);
+        // console.log(x.firstChild.nodeValue);
+        
+        
+        let x = document.getElementById("d2");
+        console.log(x);
+        console.log(x.firstChild);
+        console.log(x.firstChild.nextSibling.nodeName);
+        console.log(x.firstChild.nextSibling.nodeType);
+        console.log(x.firstChild.nextSibling.nodeValue);
+        document.write(x.firstChild);
+    </script>
+
+</body>
+</html>
