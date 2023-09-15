@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+</head>
+<body>
+    
+    <div class="one" id="d1" title="this is div">Hello</div>
+
+    <script>
+        let x = document.getElementById("d1");
+
+        console.log(x);
+        x = x.attributes;
+
+        console.log(x);
+
+        // console.log(x[0]);
+
+        // console.log(x[0].name);
+        // console.log(x[0].value);
+                // OR
+        // console.log(x[0].nodeName);
+        // console.log(x[0].nodeValue);
+
+        // console.log(x.class.name);
+        // console.log(x.class.value);
+                // OR
+        // console.log(x.class.nodeName);
+        // console.log(x.class.nodeValue);
+
+
+        len = x.length;
+        for(let attr of x){
+            console.log(attr.name);
+            console.log(attr.value);
+            document.write(`${attr.name} : ${attr.value} <br>`);
+        }
+</script>
+</body>
+</html>
