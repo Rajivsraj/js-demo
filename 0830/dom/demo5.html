@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node & Element</title>
+</head>
+<body id="b1">
+    
+
+    <div id="d1">Home</div>
+
+    <div id="d2">
+        <p id="d2p1">1this si inside 2nd div</p>
+        hello
+        <p id="d2p2">2this si inside 2nd div</p>    
+    </div>
+
+    <div id="d3">
+        hello
+        <p>d2 2this si inside 2nd div</p>
+        
+    </div>
+
+
+    <script>
+        // console.log(x.parentNode);
+        // console.log(x.parentElement);
+
+        // x = document.getElementById("html");
+        // console.log(x);
+
+        // console.log(x.parentNode);
+        // console.log(x.parentElement);
+
+
+        // x = document.getElementById("b1");
+        // console.log(x);
+
+        // console.log(x.parentNode);  // always return
+        // console.log(x.parentElement);
+
+        // x = document.getElementById("d2p1");
+        // console.log(x);
+
+        // console.log(x.parentNode);  // always return
+        // console.log(x.parentElement);
+
+
+        x = document.getElementById("d2");
+        console.log(x);
+
+        console.log(x.firstElementChild);  // will return tag
+        console.log(x.firstChild);  // will return space, tab, new line
+        // console.log(x.children);
+
+</script>
+</body>
+</html>
