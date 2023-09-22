@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" id="html1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node and Element</title>
+</head>
+<body id="b1">
+    <div class="div1" id="id1">
+        hello
+        <p id="ok">dfdfdf</p>
+    </div>
+    
+    <div class="div1" id="id2">
+        Hello 2
+        <p id="ok21">ddd1</p>
+        <p id="ok22">ddd2</p>
+        <p id="ok23">ddd3</p>
+        <p id="ok24">ddd4</p>
+    </div>
+
+    <div class="div3">hello 3</div>
+
+    <script>
+        // x = document.getElementById("html1");
+        // console.log(x);
+
+
+        x = document.getElementById("id2");
+        console.log(x);
+        console.log(x.parentNode);
+        console.log(x.parentElement);
+
+        // x = document.getElementById("ok2");
+        // console.log(x);
+        // console.log(x.parentNode);
+        // console.log(x.parentElement);
+
+
+        // x = document.getElementById("id2");
+        // console.log(x);
+        // console.log(x.childNodes);  // space, tab, enter, tag
+        // console.log(x.children);    // tags only
+
+
+        // x = document.getElementById("id2");
+        // console.log(x);
+        // console.log(x.firstChild);  // space, tab, enter, tag
+        // console.log(x.firstElementChild);   
+        
+        
+        // x = document.getElementById("id2");
+        // console.log(x);
+        // console.log(x.lastChild);  // space, tab, enter, tag
+        // console.log(x.lastElementChild);   
+    </script>
+</body>
+</html>
