@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" name="login" method="get">
+        Name: <input type="text" id="fname" name="first_name"><br>
+        <small id="msg"></small> <br><br>
+        <input type="button" value="Submit" id="submit">
+    </form>
+
+    <script>
+        function NotEmpty(){
+            let fname = document.forms.login.first_name.value
+
+            if(fname == ""){
+                //1  alert("First Name is empty")
+       
+                // 2
+                // msg = document.getElementById("msg");
+                // msg.textContent ="Please Fill First Name";
+                // msg.style.color = "red";
+
+                x = document.forms.login.first_name
+                x.style.border = "2px solid red"
+            }else{
+                // alert("Looks Good")
+
+                // document.getElementById("msg");
+                // msg.textContent ="Form Valid";
+                // msg.style.color = "green";
+
+                x = document.forms.login.first_name
+                x.style.border = "2px solid green"
+
+            }
+        }
+
+        // btn = document.getElementById("submit");
+        // btn.addEventListener("click", NotEmpty)
+        
+        x = document.getElementById("fname");
+        x.addEventListener("keyup", NotEmpty)
+
+        // TASK
+        // name field: accept only character
+        // phone field: accept only 10 digit
+    </script>
+</body>
+</html>
