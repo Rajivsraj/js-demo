@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    
+    <!-- Event binding type -->
+    <!-- 
+        Html attribute binding
+        JavaScript Binding
+        event Listner
+     -->
+
+    <p onclick="alert('Hello everyone')"> Hello click on me to popup </p>
+
+    <p onclick="showSomething()"> Hello click on me to popup </p>
+
+    <button id="btn">Hello btn</button>
+
+    <div> hello </div>
+    
+    <button id="duplicate"> Hello</button> <br><br>
+    <button id="eventListner"> Event Listner</button>
+    <script>
+
+        function dupli(){
+            alert("This is 1st func");
+        }
+
+        function dupli2(){
+            alert("This is 2nd st func");
+        }
+
+        // x = document.getElementById("eventListner");
+        // x.addEventListener("click", dupli);
+        // x.addEventListener("click", dupli2);
+
+        // function dupli(){
+        //     alert("This is 1st func");
+        // }
+
+        // function dupli2(){
+        //     alert("This is 2nd st func");
+        // }
+
+        // btn2 = document.getElementById("duplicate");
+        // btn2.onclick = dupli;
+                // OR
+        // document.getElementById("duplicate").onclick = dupli;
+
+        // document.getElementById("duplicate").onclick = dupli;
+        // document.getElementById("duplicate").onclick = dupli2;
+
+        // function showSomething(){
+        //     alert("hello this is JavaScript Binding")
+        // }
+
+        // btn = document.getElementById("btn");
+        // btn.onclick = function show(){
+        //     alert("this is alert");
+        // }
+
+        // btn = document.getElementById("btn");
+        // btn.onclick = function show(x){
+        //     alert("this is alert");
+        //     console.log(x);
+        // }
+
+        // btn = document.getElementById("btn");
+        // btn.onclick = (x) => {
+        //     console.log(x);
+        // }
+     </script>
+
+</body>
+</html>
