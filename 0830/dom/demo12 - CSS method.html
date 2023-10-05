@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .div1{
+            border: 2px solid red;
+        }
+
+        .bgcolor{
+            background-color: yellow;
+        }
+    </style>
+    <title>CSS</title>
+</head>
+<body>
+    
+    <div class="div1 c1 c2" id="d1">
+        Hello
+    </div>
+
+    
+    
+    <script>
+        div = document.getElementById("d1");
+        console.log(div);
+        // console.log(div.classList);
+        // console.log(div.classList[0]);
+        // console.log(div.classList.length);
+        // console.log(div.classList.value);
+
+        // console.log(div.className);
+
+        // div.className = "Mohan";    // override the css classes
+   
+        // cls = div.classList.item(0);
+        // cls = div.classList.add("c3");
+        // cls = div.classList.add("a");
+        
+        // cls = div.classList.remove("c2");
+        // cls = div.classList.remove("div1");
+        // cls = div.classList.remove("c1");
+
+        // remove all classes one by one
+
+        // cls = div.classList.replace("div1", "bgcolor");
+        // cls = div.classList.contains("div1");
+        // cls = div.classList.contains("div11");
+
+        // cls = div.classList.toggle("div1");
+
+        cls = div.classList.value;
+        console.log(cls);
+    </script>
+</body>
+</html>
