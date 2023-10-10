@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    
+    <table border="1">
+        <caption>hi contetn</caption>
+        <thead>
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+                <td>Hello</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        tbl = document.querySelector("#tb");
+        x = tbl.insertRow(0);
+        x.innerHTML = `
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        `;
+        console.log(x);
+        // tbl = document.querySelector("table");
+        // tbl.deleteTFoot();
+
+        // tbl = document.querySelector("table");
+        // th = tbl.createTHead();
+        // th.innerHTML = `
+        //     <tr>
+        //         <td>two</td>
+        //         <td>two</td>
+        //         <td>two</td>
+        //         <td>two</td>
+        //     </tr>
+        // `;
+        // tbl = document.querySelector("table");
+        // cap = tbl.createCaption();
+        // // cap.innerText = "This caption tag";
+        // console.log(cap.innerText);
+        // console.log(tbl);
+        // console.log(cap);
+    </script>
+</body>
+</html>
