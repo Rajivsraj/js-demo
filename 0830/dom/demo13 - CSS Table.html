@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .table, td{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+<table id="tbl1">
+    <caption>Hi Caption</caption>
+    <!-- <thead> -->
+        <tr>
+            <td>wSR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+    <!-- </thead> -->
+    <tbody>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+            <td>SR. No</td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // Delete
+    tbl = document.querySelector("#tbl1");
+    del_cap = tbl.deleteCaption();
+
+    console.log(del_cap);
+
+    // // thead not exists
+    // tbl = document.querySelector("#tbl1");
+    // thead = tbl.createTHead();
+    // thead.innerHTML = `
+    //     <tr>
+    //         <td> One </td>
+    //         <td> two </td>
+    //         <td> Three </td>
+    //         <td> Four </td>
+    //     </tr>
+    // `;
+    // console.log(thead);
+
+
+
+    // thead exists
+    // tbl = document.querySelector("#tbl1");
+    // thead = tbl.createTHead();
+
+    // console.log(thead);
+
+
+
+    // Caption not created in thml tag
+    // tbl = document.querySelector("#tbl1");
+    // cap = tbl.createCaption();
+
+    // cap.innerHTML = "<b>This is from inner html<p>";
+    // cap.innerText = "<b>This is from inner html</b>";
+    // cap.innerText = "This is from inner html";
+    // cap.textContent = "This is from inner html";
+    
+    // console.log(tbl);
+    // console.log(cap);
+
+
+    // tbl = document.querySelector("#tbl1");
+    // cap = tbl.createCaption();
+
+    // console.log(cap);
+</script>>
+</body>
+</html>
