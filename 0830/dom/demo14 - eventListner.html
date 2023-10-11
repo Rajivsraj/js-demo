@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+    
+    <!-- <button type="submit" onclick="myfunc()" id="btn"> Home </button> -->
+    <button type="submit" id="btn"> Home </button>
+
+
+    <script>
+        function myfunc(){
+            alert("Hello");
+        }
+
+        function myfunc2(){
+            alert("Hello");
+        }
+        x = document.querySelector("#btn");
+        x.addEventListener("click", myfunc);
+        x.addEventListener("click", myfunc2);
+        x.removeEventListener("click", myfunc2);
+        // x = document.querySelector("#btn");
+        // x.innerHTML = "sdhfklsdklfj";
+        // console.log(x);
+
+       
+
+
+
+    
+    </script>
+</body>
+</html>
