@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body id="bdy">
+    <button type="button" id="btn" value="Register" data-city="hi">Register</button>
+    <p id="width"></p>
+    <p id="height"></p>
+    <script>
+        document.querySelector("#html").addEventListener("mouseover", function(e){
+            // alert("hiddd");
+
+            console.log(e);
+            console.log(e.clientX);
+            console.log(e.clientY);
+            if(e.clientY <= 100){
+                alert("login");
+            }
+            document.querySelector("#width").innerHTML = e.clientX;
+            document.querySelector("#height").innerHTML = e.clientY;
+        });
+
+
+        // function fun(){
+        //     alert("hi");
+        // }
+        // x = document.querySelector("#btn");
+        // x.addEventListener("click", fun);
+       
+
+        
+        // x = document.querySelector("#btn");
+        // x.addEventListener("click", function(){
+        //     alert("hiddd");
+        // });
+
+
+        // document.querySelector("#btn").addEventListener("click", function(){
+        //     alert("hiddd");
+        // });
+
+        // function fun(){
+        //     alert("hi");
+        // }
+
+        // function fun2(){
+        //     alert("2nd hi");
+        // }
+
+        // x = document.querySelector("#btn");
+        // x.addEventListener("click", fun);
+        // x.addEventListener("click", fun2);
+
+        // x.removeEventListener("click", fun2);
+
+    </script>
+</body>
+</html>
