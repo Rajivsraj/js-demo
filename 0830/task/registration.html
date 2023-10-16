@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+        .form{
+            border: 2px solid red;
+            width: 400px;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+        }
+        .h1{
+            font-weight: 400;
+            text-align: center;
+            color: darkcyan;
+            margin: 0px;
+        }
+        .form-control{
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 7px;
+        }
+
+        .btn{
+            border: 1px;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            
+        }
+        .btn-success{
+            background-color: green;
+            color: white;
+        }
+        
+        .error-msg{
+            color: red;
+        }
+
+        .success-msg{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" name="registration">
+            <h1 class="h1">Registration</h1>
+            <input type="text" class="form-control" placeholder="Full Name" name="fname">
+            <span id="msg"></span>
+            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="text" class="form-control" name="password" placeholder="Password">
+            <input type="text" class="form-control" name="confirm-password" placeholder="Confirm Password">
+            
+            <button id="register" type="button" class="btn btn-success" value="Register">Register</button>
+
+            
+    </form>
+
+    <script>
+        
+        
+        document.querySelector("#register").addEventListener("click", function(){
+            let frm = document.forms["registration"];
+            fname = frm["fname"];
+            email = frm["email"];
+            pswd = frm["pswd"];
+            pswd = frm["pswd"];
+            
+            if(fname.value == ""){
+                msg = document.querySelector("#msg");
+                msg.style.display = "block"
+                msg.style.color = "red"
+                msg.innerHTML = "<small>Please Enter First name</small>"
+            }else{
+                msg = document.querySelector("#msg");
+                msg.style.display = "none"
+            }
+        });
+    </script>
+</body>
+</html>

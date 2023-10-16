@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+    <div style="width: 1000px; height: 100px;" class="d1" id="id" name="mydiv" data-city="hi" data-cart="3">Hello</div>
+
+    <textarea id="msg"></textarea>
+
+    <br>
+    <br>
+    w <span id="width"></span><br>
+    h <span id="height"></span>
+    <script>
+        
+        // x = document.querySelector("#msg");
+        // console.log(x);
+        document.querySelector("body").addEventListener("click", function(e){
+            console.log(e);
+            // if(e.clientY <= 100){
+            //     alert("purchaes now");
+            // }
+            // document.querySelector("#width").innerHTML = e.clientX
+            // document.querySelector("#height").innerHTML = e.clientY
+        })
+
+        // s = document.querySelector("#msg");
+        // console.log(s);
+
+        // document.querySelector("#msg").addEventListener("resize", function(e){
+        //     console.log(e);
+        //     console.log("hi");
+        // })
+
+        // document.querySelector("#id").addEventListener("click", function(e){
+        //     console.log(e);
+        // });
+
+
+        // document.querySelector("#id").addEventListener("click", function(){
+        //     alert("hi");
+        // });
+
+        // function hi(){
+        //     alert("hello");
+        // }
+
+        // d = document.querySelector("#id");
+        // d.addEventListener("click", hi);
+
+
+        // d = document.querySelector("#id");
+        // d.addEventListener("click", function(){
+        //     alert("hello");
+        // });
+
+
+       
+
+        // document.querySelector("#id").addEventListener("click", function(){
+        //     alert("hi");
+        // })
+    </script>
+</body>
+</html>
