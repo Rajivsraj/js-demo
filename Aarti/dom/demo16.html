@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 16</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="fname" name="fname">
+        <input type="text" id="lname" name="fname">
+
+        <br>
+        <input type="submit" value="Submit" id="btn">
+    </form>
+
+    <script>
+        function ok(e){
+            x = document.getElementById("fname").value;
+            y = document.getElementById("lname").value;
+
+            if(x == ""){
+                // return false;
+                e.preventDefault();
+                
+            }else{
+                console.log("OK");
+            }
+
+            if(y == ""){
+                e.preventDefault();
+                console.log("Please enter l name");
+            }
+        }
+
+        document.getElementById("btn").addEventListener("click", ok);
+    </script>
+</body>
+</html>

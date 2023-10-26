@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Flow/Propogation</title>
+    <style>
+        .d1{
+            border: 2px solid red;
+            background-color: red;
+            width: 400px;
+            height: 400px;
+        }
+
+        .d2{
+            border: 2px solid red;
+            background-color: green;
+            width: 300px;
+            height: 300px;
+        }
+
+        .d3{
+            border: 2px solid red;
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+        }
+
+        .d4{
+            border: 2px solid red;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="d1" id="d1" data-aarti="1">
+        <div class="d2" id="d2" data-aarti="2">
+            <div class="d3" id="d3" data-aarti="3">
+                <div class="d4" id="d4" data-aarti="4">
+                    hello
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+
+    <a href="www.youtube.com" id="link1">YouTube</a>
+
+    <form action="">
+        <input type="text" id="f1" name="fname">
+        <input type="submit" value="Submit" id="btn">
+    </form>
+    <script>
+        // bubbling
+        // document.getElementById("d1").addEventListener("click", function(){
+        //     console.log("1");
+        // }, false);
+
+        // document.getElementById("d2").addEventListener("click", function(){
+        //     console.log("2");
+        // }, false);
+
+        // document.getElementById("d3").addEventListener("click", function(){
+        //     console.log("3");
+        // }, false);
+
+        // document.getElementById("d4").addEventListener("click", function(){
+        //     console.log("4");
+        // }, false);
+
+
+        // Capturing Flow
+        // document.getElementById("d1").addEventListener("click", function(){
+        //     console.log("1");
+        // }, true);
+
+        // document.getElementById("d2").addEventListener("click", function(){
+        //     console.log("2");
+        // }, true);
+
+        // document.getElementById("d3").addEventListener("click", function(){
+        //     console.log("3");
+        // }, true);
+
+        // document.getElementById("d4").addEventListener("click", function(){
+        //     console.log("4");
+        // }, true);
+
+
+        // Stop Propogation
+        // document.getElementById("d1").addEventListener("click", function(e){
+        //     console.log("div1");
+        //     console.log(e.target.dataset.aarti);
+        //     console.log(e.currentTarget.dataset.aarti);
+        //     console.log("--------");
+        // }, false);
+
+        // document.getElementById("d2").addEventListener("click", function(e){
+        //     console.log("div2");
+        //     console.log(e.target.dataset.aarti);
+        //     console.log(e.currentTarget.dataset.aarti);
+        //     console.log("--------");
+        //     e.stopPropagation();
+        // }, false);
+
+        // document.getElementById("d3").addEventListener("click", function(e){
+        //     console.log("div3");
+        //     console.log(e.target.dataset.aarti);
+        //     console.log(e.currentTarget.dataset.aarti);
+        //     console.log("--------");
+        // }, false);
+
+        // document.getElementById("d4").addEventListener("click", function(e){
+        //     console.log("div4 1");
+        //     console.log(e.target.dataset.aarti);
+        //     console.log(e.currentTarget.dataset.aarti);
+        //     console.log("--------");
+        //     e.stopImmediatePropagation();
+        // }, false);
+
+        // document.getElementById("d4").addEventListener("click", function(e){
+        //     console.log("div4 2");
+        //     console.log(e.target.dataset.aarti);
+        //     console.log(e.currentTarget.dataset.aarti);
+        //     console.log("--------");
+            
+        // }, false);
+
+        // prevent Default
+        // document.getElementById("link1").addEventListener("click", function(x){
+        //     x.preventDefault();
+        //     console.log("link stopped");
+        // });
+
+        function ok(){
+            x = document.querySelector("#f1").value;
+            // console.log(x);
+            if(1==1){
+                console.log("alwyslksdjflsdjf");
+            }
+        }
+        
+        document.getElementById("btn").addEventListener("click", ok);
+    </script>
+</body>
+</html>

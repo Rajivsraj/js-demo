@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .form{
+            border: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 2px 2px red 10px;
+            padding: 10px;
+            width: 300px;
+            margin: auto;
+            display: none;
+        }
+
+        .form-control{
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    sdf
+    <form class="form" id="form">
+        <input type="text" class="form-control">
+        <input type="text" class="form-control">
+        <input type="text" class="form-control">
+        <input type="text" class="form-control">
+        <input type="text" class="form-control">
+    </form>
+
+    <script>
+        document.querySelector("html").addEventListener("mouseover", function(e){
+            frm = document.querySelector("#form")
+            if(e.y <= 100){
+                frm.style.display = "block";
+            }
+            
+        });
+
+    </script>
+</body>
+</html>
