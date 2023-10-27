@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        #d1, #d2, #d3, #d4{
+            border: 2px solid red;
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+        }
+
+        #d2{
+            background-color: green;
+            height: 300px;
+            width: 300px;
+        }
+        
+        #d3{
+            background-color:orange;
+            height: 200px;
+            width: 200px;
+        }
+        #d4{
+            background-color:blue;
+            height: 100px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1" data-vivek="1">
+        <div id="d2" data-vivek="2">
+            <div id="d3" data-vivek="3">
+                <div id="d4" data-vivek="4">
+                    hello
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <a href="www.youtube.com" id="link1">Youtube</a>0
+
+    <form>
+        <input type="text" name="fname" id="fname">
+
+        <input type="submit" value="Submit Now" id="btn">
+    </form>
+    <script>
+        
+        // Bubbling Phase
+        document.querySelector("#d1").addEventListener("click", function(){
+            console.log("1");
+        }, false);
+
+        document.querySelector("#d2").addEventListener("click", function(){
+            console.log("2");
+        }, false);
+
+        document.querySelector("#d3").addEventListener("click", function(e){
+            console.log("3 1");
+            // e.stopPropagation();
+            e.stopImmediatePropagation();
+
+        }, false);
+
+        document.querySelector("#d3").addEventListener("click", function(e){
+            console.log("3 2");
+        }, false);
+
+        document.querySelector("#d4").addEventListener("click", function(e){
+            console.log("4");
+        }, false);
+       
+        // capturing Phase
+        // document.querySelector("#d1").addEventListener("click", function(){
+        //     console.log("1");
+        // }, true);
+
+        // document.querySelector("#d2").addEventListener("click", function(){
+        //     console.log("2");
+        // }, true);
+
+        // document.querySelector("#d3").addEventListener("click", function(){
+        //     console.log("3");
+        // }, true);
+
+        // document.querySelector("#d4").addEventListener("click", function(){
+        //     console.log("4");
+        // }, true);
+
+        // document.querySelector("#d1").addEventListener("click", function(e){
+        //     console.log("1");
+        //     console.log(e.target)
+        //     console.log("target: "+e.target.dataset.vivek);
+        //     console.log("current target: "+e.currentTarget.dataset.vivek)
+        // }, false);
+
+        // document.querySelector("#d2").addEventListener("click", function(e){
+        //     console.log("2");
+        //     console.log(e.target)
+        //     console.log("target: "+e.target.dataset.vivek);
+        //     console.log("current target: "+e.currentTarget.dataset.vivek)
+
+        // }, false);
+        // document.querySelector("#d3").addEventListener("click", function(e){
+        //     console.log("3");
+        //     console.log(e.target)
+        //     console.log("target: "+e.target.dataset.vivek);
+        //     console.log("current target: "+e.currentTarget.dataset.vivek)
+
+        // }, false);
+
+        // document.querySelector("#d4").addEventListener("click", function(e){
+        //     console.log("4");
+        //     console.log(e.target)
+        //     console.log("target: "+e.target.dataset.vivek);
+        //     console.log("current target: "+e.currentTarget.dataset.vivek)
+
+        // }, false);
+
+
+        // document.querySelector("#link1").addEventListener("click", function(x){
+        //     x.preventDefault();
+        // });
+
+        // document.querySelector("#btn").addEventListener("click", function(x){
+        //     fname = document.querySelector("#fname").value;
+
+        //     if(fname == ""){
+        //         x.preventDefault();
+        //     }
+        // });
+
+        
+    </script>
+</body>
+</html>
