@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows object</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Sr. No</td>
+            <td>Name</td>
+            <td>City</td>
+            <td>Dept</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Aarti</td>
+            <td>New Delhi</td>
+            <td>IT</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mohan</td>
+            <td>UP</td>
+            <td>IT</td>
+        </tr>
+    </table>
+
+    <input type="button" value="Print" id="print">
+    <input type="button" value="Confirm" id="cnf">
+    <input type="button" value="Prompt" id="pmt">
+
+    <script>
+        // document.querySelector("#print").addEventListener("click", function(){
+        //     print()
+        //     window.print()
+        // });
+
+        // document.querySelector("#cnf").addEventListener("click", function(){
+        //     x = confirm("are you sure?");
+        //     console.log(x);
+        // });
+
+        document.querySelector("#pmt").addEventListener("click", function(){
+            x = prompt("Enter any value");
+            console.log(x);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <style>
+        .d1{
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <div class="d1" id="d1">
+        Hello
+    </div>
+
+    <hr>
+
+    <form>
+        <input type="text" id="fname" placeholder="First Name"><br><br>
+        <input type="text" id="lname" placeholder="Last Name">
+
+
+    </form>
+
+    <script>
+        // document.getElementById("d1").addEventListener("mousedown", function(){
+        //     alert("Mouse donw");
+        // });
+
+        // document.getElementById("d1").addEventListener("mousedown", function(){
+        //     console.log("mouse pressed")
+        // });
+
+        // document.getElementById("d1").addEventListener("mouseup", function(){
+        //     console.log("mouse up")
+        // });
+
+        // document.getElementById("d1").addEventListener("dblclick", function(){
+        //     console.log("you dublle click using mouse")
+        // });
+
+
+        // document.getElementById("d1").addEventListener("mouseenter", function(){
+        //     console.log("It works like mousehover")
+        // });
+
+        // document.getElementById("d1").addEventListener("mouseleave", function(){
+        //     console.log("mouse gone: works like mouseout")
+        // });
+
+        // document.getElementById("d1").addEventListener("mousemove", function(){
+        //     console.log("moved: works like mousehover and mouseenter")
+        // });
+
+        // document.getElementById("d1").addEventListener("contextmenu", function(e){
+        //     console.log("right clicked")
+        //     console.log(e)
+        // });
+
+
+        // document.getElementById("fname").addEventListener("focus", function(e){
+        //     document.getElementById("fname").style.backgroundColor = "green";
+        //     console.log("hsdlfj");
+        // });
+
+        // document.getElementById("fname").addEventListener("focusout", function(e){
+        //     document.getElementById("fname").style.backgroundColor = "";
+        //     console.log("hsdlfj");
+        // });
+
+        // document.getElementById("fname").addEventListener("keydown", function(e){
+        //     // console.log(this.value);
+
+        //     // x = document.getElementById("fname").value;
+        //     // console.log(x);
+        // });
+
+
+        // document.getElementById("fname").addEventListener("keyup", function(e){
+        //     console.log(this.value);
+        // });
+
+        // document.getElementById("fname").addEventListener("keypress", function(e){
+        //     console.log(this.value);
+        // });
+
+        document.getElementById("fname").addEventListener("keyup", function(e){
+            // console.log(this.value);
+
+            document.getElementById("d1").innerText = this.value;
+        });
+    </script>
+</body>
+</html>
