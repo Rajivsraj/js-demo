@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+</head>
+<body id="bd">
+    
+    <div id="name"></div>
+    <button type="button" id="stop">Stop</button>
+
+    <br>
+    <br>
+   
+
+    <button type="button" id="starttime">Start time</button>
+    time: <span id="time"></span>
+    <button type="button" id="stoptime">Stop Time</button>
+
+    <script>
+        // function bgcolor(x, y){
+        //     document.getElementById("bd").style.backgroundColor = "green"
+        //     console.log(x);
+        // }
+        // z = setTimeout(bgcolor, 4000, 100);
+        // console.log(z)
+
+        // document.querySelector("#stop").addEventListener("click", function(){
+        //     clearTimeout(z)
+        //     console.log(z);
+        // });
+
+
+        // setTimeout( function bgcolor(x, y){
+        //     document.getElementById("bd").style.backgroundColor = "green"
+        //     console.log(x);
+        // }, 4000, 100);
+
+        // setTimeout( function(x, y){
+        //     document.getElementById("bd").style.backgroundColor = "green"
+        //     console.log(x);
+        // }, 2000, 100);
+
+
+        // setTimeout((x, y)=>{
+        //     document.getElementById("bd").style.backgroundColor = "green"
+        //     console.log(x);
+        // }, 2000, 100);
+
+
+        // setTimeout(()=>{
+        //     document.getElementById("bd").style.backgroundColor = "green"
+        // }, 2000);
+
+        obj = new Date()
+        console.log(obj.getSeconds())
+        console.log(obj.getMinutes())
+        console.log(obj.getHours())
+
+        // function name(){
+        //     document.getElementById("name").innerText += "aarti"
+        // }
+        // setInterval(name, 1000)
+
+        // intervalId = setInterval(function(){
+        //     obj = new Date()
+        //     hours = obj.getHours()
+        //     minute = obj.getMinutes()
+        //     seconds = obj.getSeconds()
+
+        //     document.querySelector("#time").innerText = hours+":"+minute+":"+seconds
+
+        // }, 1000);
+
+        document.querySelector("#starttime").addEventListener("click", function(){
+            intervalId = setInterval(function(){
+                obj = new Date()
+                hours = obj.getHours()
+                minute = obj.getMinutes()
+                seconds = obj.getSeconds()
+
+                document.querySelector("#time").innerText = hours+":"+minute+":"+seconds
+
+            }, 1000);
+        });
+
+        document.querySelector("#stoptime").addEventListener("click", function(){
+            console.log(intervalId)
+            clearInterval(intervalId)
+        });
+        
+    </script>
+</body>
+</html>

@@ -14,8 +14,8 @@
 // dt = new Date("2023-9-1 10:20:10");
 
 
-dt = new Date();
-console.log(dt);
+obj = Date();
+console.log(obj);
 
 year = dt.getFullYear();
 day = dt.getDay();
