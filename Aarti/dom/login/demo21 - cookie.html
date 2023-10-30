@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="username" id="username" name="username">
+    <input type="password" placeholder="password" id="password" name="password">
+    <input type="button" id="login-btn" name="login" value="Login">
+
+    <script>
+        function login(){
+            username = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+            
+            document.cookie = "username="+username+";max-age="+300;
+            document.cookie = "password="+password+";max-age="+300;
+
+            document.location.href="accessCookie.html";
+        }
+
+        document.getElementById("login-btn").addEventListener("click", login);
+
+        console.log(document.cookie);
+
+        if(document.cookie){
+            console.log("already register")
+            
+        }else{
+            console.log("need to register");
+        }
+
+
+        // document.cookie = "name=aarti;max-age="+(-60);
+        // document.cookie = "name=aarti;max-age="+60*60*24*30;
+        // document.cookie = "age=20";
+        // document.cookie = "city=delhi";
+
+        // document.cookie = "age=21";
+        // 60*60*24*30
+
+
+        // localStorage.setItem("age", "20");
+        // localStorage.setItem("class", "12th");
+        // localStorage.setItem("city", "delhi");
+
+        // document.write(localStorage.getItem("age"))
+       
+
+        // localStorage.removeItem("age")
+        // document.write(localStorage.key(2))
+        // document.write(localStorage.getItem("age"))
+
+        // console.log(localStorage);
+
+    </script>
+</body>
+</html>

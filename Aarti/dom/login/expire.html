@@ -1,0 +1,9 @@
+<script>
+    // document.cookie = "name=rahul"
+    document.cookie = "username=;max-age="+(-60)
+    document.cookie = "password=;max-age="+(-60)
+
+    if(document.cookie == ""){
+        document.location.href = "accessCookie.html";
+    }
+</script>
