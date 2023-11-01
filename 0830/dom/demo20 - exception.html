@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception</title>
+</head>
+<body>
+    
+
+    <script>
+        // hello();
+        // console.log(a);
+
+        // function hello(){
+        //     console.log("ldsjflskdjf")
+        // }
+        // try{
+        //     hello();
+        //     console.log("this is after function")
+        // }catch(e){
+        //     console.log("pelase define function")
+        // }
+
+
+
+        // try{
+        //     console.log(x);
+        //     console.log("this is after function")
+        // }catch(e){
+        //     console.log("pelase define variable")
+        // }
+
+
+        function ok(x){
+            if(x < 0){
+                throw "negative value"
+            }else{
+                return "hi "+x;
+            }
+        }
+
+        
+        try{
+            // console.log(a)
+            x = ok(10);
+            console.log(x);
+        }catch(e){
+            // console.log(e)
+            // console.log(e.error)
+            // console.log(e.name)
+            console.log(e.message)
+            // console.log(e.stack)
+        }finally{
+            console.log("always run")
+        }
+    </script>
+</body>
+</html>
