@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
-    <script type="module" src="app.js"></script>
+    <!-- <script type="module" src="app.js"></script> -->
 </head>
 <body>
     
+    <script>
+        console.log("Start");
+
+        function age(ag, callback){
+            setTimeout(()=>{
+                console.log("age Fun")
+                callback(ag)
+            }, 2000);
+        }
+
+        age(20, (y)=>{
+            console.log("your age is "+y)
+        });
+        
+        console.log("End");
+    </script>
 </body>
 </html>
